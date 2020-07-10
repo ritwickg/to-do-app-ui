@@ -1,0 +1,21 @@
+.auth-container {
+    width: 60%;
+}
+
+.mat-tab-label {
+    min-width: 50% !important;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 50% !important;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+/* Styles for the ink bar */
+.mat-ink-bar {
+    width: 50%;
+}

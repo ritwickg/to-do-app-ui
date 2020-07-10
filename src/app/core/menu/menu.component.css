@@ -1,0 +1,6 @@
+.toolbar {
+    flex: 1 1 auto;
+}
+.toolbar.menu {
+    flex: 1;
+}

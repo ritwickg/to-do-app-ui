@@ -1,0 +1,11 @@
+<mat-toolbar>
+    <span class="toolbar">Todo App</span>
+    <span class="menu">
+        <button *ngIf="!userService.isUserLoggedIn" mat-icon-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item type="button" (click)="navigateForAuthentication()">
+                Login/Signup
+            </button>
+        </mat-menu>
+    </span>
+</mat-toolbar>
