@@ -14,4 +14,7 @@ export class MenuComponent implements OnInit {
     navigateForAuthentication() {
         this.router.navigate(['/auth']);
     }
+    logout() {
+        this.userService.logout();
+    }
 }

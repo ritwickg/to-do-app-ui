@@ -1,0 +1,39 @@
+<div class="container">
+    <form [formGroup]="addActivityFormGroup">
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <mat-form-field>
+                        <mat-label>Select created date</mat-label>
+                        <input matInput [matDatepicker]="createdDatepicker" formControlName="createdDate" />
+                        <mat-datepicker-toggle matSuffix [for]="createdDatepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #createdDatepicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+
+                <div>
+                    <mat-form-field>
+                        <mat-label>Select created date</mat-label>
+                        <input matInput [matDatepicker]="activityDatepicker" formControlName="activityDate" />
+                        <mat-datepicker-toggle matSuffix [for]="activityDatepicker"></mat-datepicker-toggle>
+                        <mat-datepicker #activityDatepicker></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-select formControlName="status">
+                            <mat-option *ngFor="let status of activityList" [value]="status.value">
+                                {{ status.displayName }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <button mat-raised-button type="button" [disabled]="!addActivityFormGroup.valid" (click)="addActivity()">
+                        Add activity
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
